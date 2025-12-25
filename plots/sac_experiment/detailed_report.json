@@ -1,0 +1,24 @@
+{
+  "training_overview": {
+    "algorithm": "sac",
+    "total_episodes": 9999,
+    "total_steps": 115502,
+    "training_duration_hours": 1.2103699974219004,
+    "efficiency_episodes_per_hour": 8261.110256614063
+  },
+  "performance": {
+    "best_evaluation_reward": 15.600011240164395,
+    "mean_episode_reward": 9.867876132335146,
+    "final_evaluation_stats": {
+      "mean": 8.552066848361267,
+      "std": 1.2293323395480382,
+      "min": 6.18200405090245,
+      "max": 9.65854290654914
+    }
+  },
+  "success_indicators": {
+    "training_completed": true,
+    "positive_rewards": true,
+    "stable_performance": true
+  }
+}

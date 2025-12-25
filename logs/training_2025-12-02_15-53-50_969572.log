@@ -1,0 +1,3 @@
+2025-12-02 15:53:50 | INFO     | src.utils.utils:setup_logging:51 | Logging initialized | Level: INFO | Dir: logs
+2025-12-02 15:53:50 | INFO     | src.utils.utils:set_seed:72 | Seed set to 42
+2025-12-02 15:53:50 | INFO     | src.utils.utils:get_device:189 | Using CPU device

@@ -1,0 +1,48 @@
+# CQL (Conservative Q-Learning) + Transformer Architecture Config
+
+env:
+  max_session_length: 20
+  num_recent_tracks: 20      # Longer history for Transformer
+  user_embed_dim: 32
+  song_embed_dim: 8
+  mode: continuous
+  use_context_features: true
+  normalize_embeddings: true
+  
+  # Reward weights
+  reward_full_listen: 1.0
+  reward_partial_listen: 0.5
+  reward_skip: -0.5
+  reward_diverse_weight: 0.2
+  reward_personalization_weight: 0.3
+  reward_session_bonus_weight: 0.1
+  
+  # Observation format
+  obs_format: sequential
+
+training:
+  algorithm: cql
+  learning_rate: 0.0003
+  batch_size: 64
+  buffer_size: 100000
+  gamma: 0.99
+  
+  # SAC/CQL specific
+  tau: 0.005
+  alpha: 0.2
+  automatic_entropy_tuning: true
+  target_update_interval: 1
+  
+  # CQL specific
+  cql_weight: 1.0  # Weight for conservative loss
+
+agent:
+  network_config:
+    encoder_type: transformer
+    hidden_dim: 128
+    num_layers: 2
+    nhead: 4
+    dropout: 0.1
+    
+    # MLP fallback (if needed)
+    hidden_dims: [256, 256]

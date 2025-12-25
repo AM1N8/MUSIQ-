@@ -1,0 +1,53 @@
+{
+  "experiment_name": "cql_experiment",
+  "algorithm": "cql",
+  "total_episodes": 1,
+  "total_steps": 8,
+  "elapsed_time_hours": 5.376047558254666e-05,
+  "best_eval_reward": -Infinity,
+  "final_eval_rewards": [
+    -0.4372655862350124
+  ],
+  "mean_episode_reward": 0.11283583113786132,
+  "config": {
+    "env": {
+      "data_path": "data",
+      "mode": "continuous",
+      "max_session_length": 20,
+      "num_recent_tracks": 20,
+      "user_embed_dim": 32,
+      "song_embed_dim": 8,
+      "reward_full_listen": 1.0,
+      "reward_partial_listen": 0.5,
+      "reward_skip": -0.5,
+      "reward_diversity_weight": 0.2,
+      "reward_personalization_weight": 0.3,
+      "reward_session_bonus_weight": 0.1,
+      "skip_threshold": 0.3,
+      "partial_threshold": 0.6,
+      "dropout_probability": 0.05
+    },
+    "training": {
+      "algorithm": "cql",
+      "num_episodes": 2,
+      "eval_interval": 100,
+      "eval_episodes": 10,
+      "save_interval": 1000,
+      "log_interval": 10,
+      "warmup_steps": 1000,
+      "grad_clip": 1.0,
+      "checkpoint_dir": "checkpoints",
+      "log_dir": "logs",
+      "tensorboard_dir": "runs",
+      "experiment_name": null,
+      "use_wandb": false,
+      "wandb_project": "music-rl",
+      "device": "cuda",
+      "num_workers": 1,
+      "seed": 42
+    },
+    "dqn": null,
+    "a2c": null,
+    "sac": null
+  }
+}

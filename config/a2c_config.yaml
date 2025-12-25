@@ -1,0 +1,57 @@
+env:
+  data_path: "data"
+  mode: "discrete"
+  max_session_length: 20
+  num_recent_tracks: 5
+  user_embed_dim: 32
+  song_embed_dim: 8
+  
+  reward_full_listen: 1.0
+  reward_partial_listen: 0.5
+  reward_skip: -0.5
+  reward_diversity_weight: 0.2
+  reward_personalization_weight: 0.3
+  reward_session_bonus_weight: 0.1
+  
+  skip_threshold: 0.3
+  partial_threshold: 0.6
+  dropout_probability: 0.05
+
+training:
+  algorithm: "a2c"
+  num_episodes: 10000
+  eval_interval: 100
+  eval_episodes: 10
+  save_interval: 1000
+  log_interval: 10
+  
+  warmup_steps: 0
+  grad_clip: 0.5
+  
+  checkpoint_dir: "checkpoints"
+  log_dir: "logs"
+  tensorboard_dir: "runs"
+  
+  experiment_name: null
+  use_wandb: false
+  wandb_project: "music-rl"
+  
+  device: "cuda"
+  num_workers: 1
+  seed: 42
+
+a2c:
+  learning_rate: 0.0003
+  gamma: 0.99
+  value_loss_coef: 0.5
+  entropy_coef: 0.01
+  max_grad_norm: 0.5
+  n_steps: 5
+  
+  network_config:
+    hidden_dims: [256, 128, 64]
+    activation: "relu"
+    use_layer_norm: true
+    dropout: 0.1
+    use_attention: true
+    attention_heads: 4

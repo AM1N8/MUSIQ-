@@ -1,0 +1,12 @@
+2025-11-26 20:48:03 | INFO     | src.utils.utils:setup_logging:51 | Logging initialized | Level: INFO | Dir: logs
+2025-11-26 20:48:03 | INFO     | src.utils.utils:print_system_info:303 | ============================================================
+2025-11-26 20:48:03 | INFO     | src.utils.utils:print_system_info:304 | System Information
+2025-11-26 20:48:03 | INFO     | src.utils.utils:print_system_info:305 | ============================================================
+2025-11-26 20:48:03 | INFO     | src.utils.utils:print_system_info:306 | Python version: 3.11.13 (main, Sep  2 2025, 14:14:37) [MSC v.1944 64 bit (AMD64)]
+2025-11-26 20:48:03 | INFO     | src.utils.utils:print_system_info:307 | PyTorch version: 2.9.1+cpu
+2025-11-26 20:48:03 | INFO     | src.utils.utils:print_system_info:308 | CUDA available: False
+2025-11-26 20:48:03 | INFO     | src.utils.utils:print_system_info:315 | ============================================================
+2025-11-26 20:48:03 | INFO     | src.utils.utils:set_seed:72 | Seed set to 42
+2025-11-26 20:48:03 | INFO     | src.utils.utils:get_device:189 | Using CPU device
+2025-11-26 20:48:03 | INFO     | src.utils.utils:save_config_as_yaml:197 | Saved config to checkpoints\dqn_experiment\config.yaml
+2025-11-26 20:48:03 | INFO     | __main__:train:143 | Creating environment...
