@@ -241,9 +241,9 @@ FeatureExtractor(
 ```mermaid
 graph LR
     S[State] --> FE[Feature Extractor]
-    FE --> V[Value Stream → V(s)]
-    FE --> A[Advantage Stream → A(s,a)]
-    V --> Q["Q(s,a) = V + (A - mean(A))"]
+    FE --> V[Value Stream]
+    FE --> A[Advantage Stream]
+    V --> Q[Q Values]
     A --> Q
 ```
 
